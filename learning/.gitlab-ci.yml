@@ -1,0 +1,10 @@
+build:learning:
+  stage: build
+  script:
+    - cd learning
+    - gfortran files1.f90
+    - gfortran pointer_t1.f90
+    - gfortran pointer_t1bis.f90
+    - gfortran pointer_t2.f90
+    - gfortran pointer_t3.f90
+    - gfortran pointer_t4.f90

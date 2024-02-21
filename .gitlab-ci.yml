@@ -1,0 +1,11 @@
+default:
+  before_script:
+    - gfortran --version
+    - pwd
+
+stages:
+  - build
+  
+include:
+  - local: 'unit-simple/.gitlab-ci.yml'
+  - local: 'learning/.gitlab-ci.yml'

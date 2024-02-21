@@ -19,6 +19,7 @@ program main
     print '(f8.3)', c%inverse%offset
     print '(f8.3)', c%inverse%inverse%scale
     print '(f8.3)', c%inverse%inverse%offset
+    print '(f8.3)', c%convert(2.0)
 
     m%age = 6
     ms%age = 2

@@ -4,6 +4,7 @@ module unit_mod
     private
     
     type, public :: unit_converter_class
+    
         real, public :: scale
         real, public :: offset
         class(unit_converter_class), public, pointer :: inverse
@@ -20,7 +21,8 @@ module unit_mod
         real,    public :: size
         
     contains
-        procedure, public  :: print_age => animal_print_age
+        procedure, public :: print_age => animal_print_age
+        ! procedure, public :: get_converter_to => unit_get_converter_to
         
     end type unit_class
     
@@ -57,10 +59,16 @@ contains
         c%inverse => i
     end subroutine unit_converter_internal_init
     
-    subroutine unit_converter_convert(this, v)
+    real function unit_converter_convert(this, v)
         class(unit_converter_class), intent(inout) :: this
         real, intent(in) :: v
-    end subroutine unit_converter_convert
+        unit_converter_convert = v * this%scale + this%offset
+    end function unit_converter_convert
+    
+    ! class(unit_converter_class) function linear(this)
+    !    class(unit_converter_class), intent(inout) :: this
+    !    class(unit_converter_class), intent(inout) :: line
+    ! end function linear
     
 end module unit_mod
 
