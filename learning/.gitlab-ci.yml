@@ -2,23 +2,4 @@ build:learning:
   stage: build
   script:
     - cd learning
-    - gfortran files1.f90
-    - gfortran pointer_t1.f90
-    - gfortran pointer_t1bis.f90
-    - gfortran pointer_t2.f90
-    - gfortran pointer_t3.f90
-    - gfortran pointer_t4.f90
-    - gfortran exemple_pointeurs1.f90
-    - gfortran exemple_pointeurs3.f90
-    - gfortran exemple_pointeurs4.f90
-    - gfortran exemple_pointeurs5.f90
-    - gfortran exemple_pointeurs6.f90
-    - gfortran ex1.f90
-    - gfortran ex2.f90
-    - gfortran ex3.f90
-    - gfortran ex4.f90
-    - gfortran ex4b.f90
-    - gfortran ex5.f90
-    - gfortran ex6.f90
-    - gfortran ex7.f90
-    - gfortran do1.f90
+    - for file in $(ls *.f90); do gfortran $file; done;
