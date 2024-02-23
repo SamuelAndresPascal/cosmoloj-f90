@@ -1,0 +1,27 @@
+program exo4
+  implicit none
+  
+  type eleve
+    sequence
+    character(10) :: nom
+    character(10) :: prenom
+    integer, dimension(6) :: note
+  end type eleve
+  
+  type(eleve), dimension(20) :: istgg
+  integer :: i
+  
+  do i = 1, 20
+    read(*, *) istgg(i)%nom
+    read(*, *) istgg(i)%prenom
+    read(*, *) istgg(i)%note
+  end do
+  
+  write(*, *) istgg(3)
+  write(*, *) istgg(7)%prenom(4:7)
+  write(*, *) istgg(11)%note(4)
+  write(*, *) istgg(4:9)%note(3)
+  write(*, *) istgg(17)%note(2:6)
+  write(*, *) istgg(4:9)%note(2:6)
+  stop
+end program exo4
