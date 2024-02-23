@@ -2,4 +2,4 @@ build:learning:
   stage: build
   script:
     - cd learning
-    - for file in $(ls *.f90); do gfortran $file; done;
+    - for file in $(ls *.f90); do echo "compile $file"; gfortran $file; done;
