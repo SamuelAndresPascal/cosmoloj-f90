@@ -8,3 +8,7 @@ build:learning:
     - gfortran pointer_t2.f90
     - gfortran pointer_t3.f90
     - gfortran pointer_t4.f90
+    - gfortran exemple_pointeurs1.f90
+    - gfortran exemple_pointeurs2.f90
+    - gfortran exemple_pointeurs4.f90
+    - gfortran exemple_pointeurs5.f90
