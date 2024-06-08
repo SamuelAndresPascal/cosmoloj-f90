@@ -1,7 +1,5 @@
 *.o
 *.mod
-a.out
-main
 CMakeCache.txt
 CMakeFiles/
 Makefile

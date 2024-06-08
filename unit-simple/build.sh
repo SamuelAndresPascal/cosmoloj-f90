@@ -1,3 +1,3 @@
-#!/usr/bin/bash
-gfortran -c unit-simple.f90
-gfortran -o main main.f90 unit-simple.o
+rm -rf lib/ bin/ CMakeFiles/ CMakeCache.txt Makefile cmake_install.cmake
+cmake . -G "CodeBlocks - Unix Makefiles"
+make
