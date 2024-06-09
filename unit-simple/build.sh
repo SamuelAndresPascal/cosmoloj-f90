@@ -1,3 +1,3 @@
-rm -rf lib/ bin/ CMakeFiles/ CMakeCache.txt Makefile cmake_install.cmake
+rm -rf mod/ lib/ bin/ CMakeFiles/ CMakeCache.txt Makefile cmake_install.cmake
 cmake . -G "CodeBlocks - Unix Makefiles"
 make

@@ -11,6 +11,10 @@ if(NOT DEFINED LIBRARY_OUTPUT_PATH)
     set(LIBRARY_OUTPUT_PATH lib/${CMAKE_BUILD_TYPE})
 endif()
 
+if(NOT DEFINED CMAKE_Fortran_MODULE_DIRECTORY)
+    set(CMAKE_Fortran_MODULE_DIRECTORY mod/${CMAKE_BUILD_TYPE})
+endif()
+
 file(
     GLOB
     source_files

@@ -1,10 +1,9 @@
-*.o
-*.mod
 CMakeCache.txt
 CMakeFiles/
 Makefile
 cmake_install.cmake
 lib/
 bin/
+mod/
 *.cbp
 *.layout

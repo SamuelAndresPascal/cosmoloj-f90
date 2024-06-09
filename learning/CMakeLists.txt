@@ -7,6 +7,10 @@ if(NOT DEFINED EXECUTABLE_OUTPUT_PATH)
     set(EXECUTABLE_OUTPUT_PATH bin/${CMAKE_BUILD_TYPE})
 endif()
 
+if(NOT DEFINED CMAKE_Fortran_MODULE_DIRECTORY)
+    set(CMAKE_Fortran_MODULE_DIRECTORY mod/${CMAKE_BUILD_TYPE})
+endif()
+
 file(
     GLOB
     source_files

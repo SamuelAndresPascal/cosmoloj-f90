@@ -21,12 +21,10 @@ program main
     print '(f8.3)', c%inverse%inverse%offset
     print '(f8.3)', c%convert(2.0)
 
-    m%age = 6
-    ms%age = 2
 
-    call m%bark()
+    call m%to_base()
     call m%print_age()
 
-    call ms%quack()
+    call ms%to_base()
     call ms%print_age()
 end program main
