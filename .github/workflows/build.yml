@@ -1,0 +1,24 @@
+name: build
+run-name: ${{ github.actor }}
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '30 5 * * 0'
+
+jobs:
+  build__unit_simple:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt install -y libcppunit-dev
+      - working-directory: ./unit-simple
+        run: . build.sh
+  build__learning:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - working-directory: ./learning
+        run: . build.sh
