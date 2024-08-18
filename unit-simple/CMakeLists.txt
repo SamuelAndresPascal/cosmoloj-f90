@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.22)
 project(simple-unit)
 
 enable_language(Fortran)
@@ -28,12 +28,12 @@ add_library(
 )
 
 add_executable(
-    main
-    demo/main.f90
+    demo
+    demo/demo.f90
 )
 
 target_link_libraries(
-    main
+    demo
     simple-unit
 )
 

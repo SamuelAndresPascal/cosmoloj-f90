@@ -4,5 +4,5 @@ build:unit-simple:
     - cd unit-simple
     - cmake .
     - make
-    - ./bin/main
+    - ./bin/demo
 

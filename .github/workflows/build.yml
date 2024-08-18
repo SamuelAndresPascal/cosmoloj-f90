@@ -15,10 +15,15 @@ jobs:
       - uses: actions/checkout@v4
       - run: sudo apt install -y libcppunit-dev
       - working-directory: ./unit-simple
-        run: . build.sh
+        run: |
+          cmake .
+          make
+          ./bin/demo
   build__learning:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - working-directory: ./learning
-        run: . build.sh
+        run: |
+          cmake .
+          make
